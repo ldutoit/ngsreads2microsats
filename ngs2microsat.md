@@ -31,9 +31,11 @@ The output of MsatCommander contains lot of information across a couple of files
 1. Remove primers that are indicated as duplicated by MSATCOMMANDER
 2. Remove Microsatellites sequences that overlap with each other
 
-Step 2 is the center of the pipeline ran by []()
+Step 2 is the center of the pipeline ran by [MSATCOMMANDER](https://code.google.com/archive/p/msatcommander/downloads)
 
 It can be run as follow
 ```
-clean_msatcomm_output --input_microsats ... --output_primers --output_foler ... and it will output a few files, most importantly THIS and THART
+clean_msatcomm_output.py --input_microsats ... --input_primers --fasta ... a
 ```
+
+It will output a few files. An example of the output can be found in """"
