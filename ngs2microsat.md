@@ -11,7 +11,7 @@ Here is an example of assembly for paired-end reads using SPAdes 3.11
 ```
 #!/bin/sh
 mkdir -p assembly10
-seqtk sample -s100 FORWARDREADS.fastq.gz 0.1 > forward_10percent.fastq
+seqtk sample -s100 FORWARDREADS.fastq.gz 0.1 > forward_10percent.fastq # the s is the seed making sure we take erxactly the same forward and reverse.
 seqtk sample -s100 REVERSEREADS.fastq.gz 0.1 > reverse_10percent.fastq
 spades.py  -t 8 -m 100 -o assembly10/ -1  forward_10percent.fastq -2 reverse_10percent.fastq # 8 cores and 16G of memory
 ```
