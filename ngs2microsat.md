@@ -18,7 +18,7 @@ spades.py  -t 8 -m 100 -o assembly10/ -1  forward_10percent.fastq -2 reverse_10p
 
 ## 2. Detection of microsatellites
 
-For this step we will rely on [MSATCOMMANDER](https://code.google.com/archive/p/msatcommander/downloads). The command line can be run, but the GUI is easy and offer a great overview of the aprameters. Below are sensible settings for microsatellites design. They can of course be adapted to your wishes.
+For this step we will rely on [MSATCOMMANDER](https://code.google.com/archive/p/msatcommander/downloads). The command line can be run, but the GUI is easy and offer a great overview of the parameters. Below are sensible settings for microsatellites design. They can of course be adapted to your wishes.
 
 ![](pictures/param1.png)
 ![](pictures/param2.png)
