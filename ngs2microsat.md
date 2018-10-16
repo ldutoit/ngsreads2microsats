@@ -18,7 +18,10 @@ spades.py  -t 8 -m 100 -o assembly10/ -1  forward_10percent.fastq -2 reverse_10p
 
 ## 2. Detection of microsatellites
 
-For this step we will rely on MSATCOMMANDER[](). The command line can be run, but the GUI is easy to run. Below are sensible settings for microsatellites design. They can of course be adapted to your wishes.
+For this step we will rely on [MSATCOMMANDER](https://code.google.com/archive/p/msatcommander/downloads). The command line can be run, but the GUI is easy and offer a great overview of the aprameters. Below are sensible settings for microsatellites design. They can of course be adapted to your wishes.
+
+![](pictures/param1.png)
+![](pictures/param2.png)
 
 
 ## 3. Cleaning MSAT COMMANDER OUTPUT
@@ -30,4 +33,7 @@ The output of MsatCommander contains lot of information across a couple of files
 
 Step 2 is the center of the pipeline ran by []()
 
-It can be run as follow : ... -- ... -- and it will output a few files, most importantly THIS and THART
+It can be run as follow
+```
+clean_msatcomm_output --input_microsats ... --output_primers --output_foler ... and it will output a few files, most importantly THIS and THART
+```
