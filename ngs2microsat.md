@@ -34,9 +34,15 @@ The output of MsatCommander contains lot of information across a couple of files
 
 Step 2 is the center of the pipeline ran by [MSATCOMMANDER](https://code.google.com/archive/p/msatcommander/downloads)
 
-It can be run as follow
+It can be run as follow if you are in the folder with the output of msatcommander:
+
 ```
-clean_msatcomm_output.py --input_microsats ... --input_primers --fasta ... a
+python2.7 clean_msatcomm_output.py yourgenome.fasta
 ```
 
-It will output a few files. An example of the output can be found in """"
+Have a look at the help if you have other paths.
+
+```
+python2.7 clean_msatcomm_output.py --help
+```
+
