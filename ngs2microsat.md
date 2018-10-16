@@ -23,6 +23,7 @@ For this step we will rely on [MSATCOMMANDER](https://code.google.com/archive/p/
 ![](pictures/param1.png)
 ![](pictures/param2.png)
 
+The software will first ask you for the fasta genome file and then for an output folder.
 
 ## 3. Cleaning MSAT COMMANDER OUTPUT
 
