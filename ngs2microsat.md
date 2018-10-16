@@ -23,6 +23,7 @@ For this step we will rely on [MSATCOMMANDER](https://code.google.com/archive/p/
 ![](pictures/param1.png)
 ![](pictures/param2.png)
 
+MSATCOMMANDER will first ask you for the fasta genome file and then for an output folder.
 
 ## 3. Cleaning MSAT COMMANDER OUTPUT
 
@@ -31,9 +32,17 @@ The output of MsatCommander contains lot of information across a couple of files
 1. Remove primers that are indicated as duplicated by MSATCOMMANDER
 2. Remove Microsatellites sequences that overlap with each other
 
-Step 2 is the center of the pipeline ran by []()
+Step 2 is the center of the pipeline ran by [MSATCOMMANDER](https://code.google.com/archive/p/msatcommander/downloads)
 
-It can be run as follow
+It can be run as follow if you are in the folder with the output of msatcommander:
+
 ```
-clean_msatcomm_output --input_microsats ... --output_primers --output_foler ... and it will output a few files, most importantly THIS and THART
+python2.7 clean_msatcomm_output.py yourgenome.fasta
 ```
+
+Have a look at the help if you have other paths.
+
+```
+python2.7 clean_msatcomm_output.py --help
+```
+
