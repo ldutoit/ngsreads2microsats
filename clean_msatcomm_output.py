@@ -100,7 +100,7 @@ joined_clean.to_csv(args.output_folder+"/tempjoin.csv",index=False)
 
 #read the genome
 
-print "Appending sequences....\n...readind the genome"
+print "Appending sequences....\n...reading the genome"
 input_file = open(args.genome)
 my_dict = SeqIO.to_dict(SeqIO.parse(input_file, "fasta"))
 output=open(args.output_folder+"/joined_microsat_withseq.csv","w")
