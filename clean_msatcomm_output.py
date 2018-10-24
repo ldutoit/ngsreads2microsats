@@ -135,16 +135,22 @@ output.close()
 
 
 #3. Look for overlaps, if overlaps across different microsat_id
-#produce alignments.log that contains all the alignments, the matching sequences ids and then remove all
+#produce alignments.log theat contains all the alignments, the matching sequences ids and then remove all
+totalcomb = [[key1,key2] for key1,key2 in itertools.combinations(dict_sequences.keys(),2) if  (key1+key2).count("primertoprimer")<2 ]
 
-print "...CHECKING  OVERLAP..."
+print "...CHECKING  OVERLAP...",len(totalcomb)," sequence combinations"
 
 output =open(args.output_folder+"/alignments.log","w")
 scorethreshold =17
+i=0
 sequence_with_overlaps=set()
+print len(totalcomb)
+comb=0
 for key1,key2 in itertools.combinations(dict_sequences.keys(),2):
     if key1.split("_")[1]!=key2.split("_")[1]: # if they are different microsat only
         if (key1+key2).count("primertoprimer")<2:
+            comb+=1
+            if comb%10000==0:print comb,"/",len(totalcomb),(comb/float(len(totalcomb)))*100,("%")
             #print "makealign"
             alignments= pairwise2.align.localms(dict_sequences[key1],dict_sequences[key2],1,-1,-2,-1)
             alignments+= pairwise2.align.localms(dict_sequences[key1],reverse_complement(dict_sequences[key2]),1,-1,-2,-1)
@@ -186,7 +192,7 @@ df = df.sort_values(by=['length_motif',"count"],ascending=False)
 df.to_csv(path_or_buf=args.output_folder+"/joined_microsat_withseqNOOVERLAP.csv", sep=',')
 
 #make a fasta
-output =open(args.output_folder+"joined_microsat_withseqNOOVERLAP.fasta","w")
+output =open(args.output_folder+"/joined_microsat_withseqNOOVERLAP.fasta","w")
 for index, row in df.iterrows():
    output.write(">msatid_"+str(row["id"])+"_leftprimer\n"+row["left_sequence"]+"\n")
    output.write(">msatid_"+str(row["id"])+"_rightprimer\n"+row["right_sequence"]+"\n")
@@ -201,4 +207,4 @@ and in "+ args.output_folder+"/joined_microsat_withseqNOOVERLAP.csv\nDONE"
 output=open(args.output_folder+"/README.txt","w")
 output.write(finalmessage)
 output.close()
-print "\n\n\n"+finalmessage
+print "\n\n\n"+finalmessage 
