@@ -54,6 +54,8 @@ parser.add_argument("-output_folder",help="output_folder",type=str,default="prim
 args = parser.parse_args()
 
 
+scorethreshold =15 # This parameter is not accessible from the command line as it is a bit sensible, it is the score at which we assess an alignment to be real
+#alignments+= pairwise2.align.localms(dict_sequences[key1],reverse_complement(dict_sequences[key2]),1,-1,-2,-1)
 
 
 ###FUNCTIONS
