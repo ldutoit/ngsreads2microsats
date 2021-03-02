@@ -6,7 +6,7 @@ The pipeline is decribed in [ngs2microsat.md](ngs2microsat.md)
 ## Summary
 
 This repository present a method to design microsatellites primers from any species using raw NGS reads even at low coverage.
-It can also be used to detect microsatellites in any genome. It is centered around [MSATCOMMANDER](https://code.google.com/archive/p/msatcommander/downloads), adding a few convenient cleaning and selecting steps as well as showing that it can be ran easily from raw reads by creating a fast assembly.
+It can also be used to detect microsatellites in any genome. It is centered around [MSATCOMMANDER](https://code.google.com/archive/p/msatcommander/downloads), adding a few convenient cleaning and selecting steps as well as showing that it can be ran easily from raw reads by creating a fast assembly. Microsats can be useful for phasing as they have a lot of alleles.
 
 It works in 3 steps:
 
